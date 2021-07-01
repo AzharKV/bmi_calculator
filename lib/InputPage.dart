@@ -64,7 +64,7 @@ class _InputPageState extends State<InputPage> {
           //Slider
           Expanded(
             child: RepeatContainerCode(
-              colors: Color(0xFF1D1E33),
+              colors: activeColor,
               cardWidget: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -83,8 +83,8 @@ class _InputPageState extends State<InputPage> {
                     value: sliderValue.toDouble(),
                     min: 120.0,
                     max: 220.0,
-                    activeColor: Color(0xFFEB1555),
-                    inactiveColor: Color(0xFF8D8E98),
+                    activeColor: sliderActiveColor,
+                    inactiveColor: sliderInActiveColor,
                   ),
                 ],
               ),
@@ -96,7 +96,7 @@ class _InputPageState extends State<InputPage> {
               //Weight
               Expanded(
                 child: RepeatContainerCode(
-                  colors: Color(0xFF1D1E33),
+                  colors: activeColor,
                   cardWidget: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -109,13 +109,9 @@ class _InputPageState extends State<InputPage> {
                         children: [
                           RoundIcon(
                             iconData: FontAwesomeIcons.minus,
-                            onPress: () {
-                              setState(() {
-                                if (weight > 1) {
-                                  weight--;
-                                }
-                              });
-                            },
+                            onPress: () => setState(() {
+                              if (weight > 1) weight--;
+                            }),
                           ),
                           SizedBox(width: 10.0),
                           RoundIcon(
@@ -131,7 +127,7 @@ class _InputPageState extends State<InputPage> {
               //Age
               Expanded(
                 child: RepeatContainerCode(
-                  colors: Color(0xFF1D1E33),
+                  colors: activeColor,
                   cardWidget: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -145,9 +141,7 @@ class _InputPageState extends State<InputPage> {
                           RoundIcon(
                             iconData: FontAwesomeIcons.minus,
                             onPress: () => setState(() {
-                              if (age > 1) {
-                                age--;
-                              }
+                              if (age > 1) age--;
                             }),
                           ),
                           SizedBox(width: 10.0),
@@ -181,7 +175,7 @@ class _InputPageState extends State<InputPage> {
               // width: MediaQuery.of(context).size.width,
               width: double.infinity,
               height: 60.0,
-              color: Color(0xFFEB1555),
+              color: sliderActiveColor,
               child: Center(
                 child: Text(
                   "CALCULATE",
@@ -210,7 +204,7 @@ class RoundIcon extends StatelessWidget {
       elevation: 6.0,
       constraints: BoxConstraints.tightFor(height: 50.0, width: 50.0),
       shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
+      fillColor: roundIconFillColor,
     );
   }
 }

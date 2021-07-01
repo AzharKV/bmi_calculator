@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ConstantFile.dart';
 import 'InputPage.dart';
 
 void main() => runApp(MyApp());
@@ -9,8 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        primaryColor: Color(0xFF0A0E21),
-        scaffoldBackgroundColor: Color(0xFF0A0E21),
+        primaryColor: primaryColor,
+        scaffoldBackgroundColor: primaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: InputPage(),

@@ -51,7 +51,7 @@ class Result extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 height: 60.0,
-                color: Color(0xFFEB1555),
+                color: sliderActiveColor,
                 child: Center(
                     child: Text(
                   "RECALCULATE",
