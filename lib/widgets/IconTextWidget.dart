@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ConstantFile.dart';
+import '../ConstantFile.dart';
 
 class RepeatTextAndIcon extends StatelessWidget {
   final IconData? iconData;

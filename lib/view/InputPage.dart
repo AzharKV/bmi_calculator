@@ -1,11 +1,12 @@
+import 'package:bmi_calculator/widgets/roundIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'ConstantFile.dart';
-import 'ContainerWidget.dart';
-import 'IconTextWidget.dart';
+import '../ConstantFile.dart';
+import '../widgets/ContainerWidget.dart';
+import '../widgets/IconTextWidget.dart';
 import 'Result.dart';
-import 'ResultCalculate.dart';
+import '../ResultCalculate.dart';
 
 enum Gender { male, female }
 
@@ -156,6 +157,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ]),
           ),
+          //button
           InkWell(
             onTap: () {
               Calculator calc = Calculator(height: sliderValue, weight: weight);
@@ -175,34 +177,12 @@ class _InputPageState extends State<InputPage> {
               height: 60.0,
               color: sliderActiveColor,
               child: Center(
-                child: Text(
-                  "CALCULATE",
-                  style: buttonText,
-                ),
+                child: Text("CALCULATE", style: buttonText),
               ),
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-class RoundIcon extends StatelessWidget {
-  final IconData? iconData;
-  final Function()? onPress;
-
-  RoundIcon({this.iconData, this.onPress});
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: onPress,
-      child: Icon(iconData),
-      elevation: 6.0,
-      constraints: BoxConstraints.tightFor(height: 50.0, width: 50.0),
-      shape: CircleBorder(),
-      fillColor: roundIconFillColor,
     );
   }
 }

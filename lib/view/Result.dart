@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'ConstantFile.dart';
-import 'ContainerWidget.dart';
+import '../ConstantFile.dart';
+import '../widgets/ContainerWidget.dart';
 import 'InputPage.dart';
 
 class Result extends StatelessWidget {

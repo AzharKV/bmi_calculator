@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'ConstantFile.dart';
-import 'InputPage.dart';
+import 'view/InputPage.dart';
 
 void main() => runApp(MyApp());
 
