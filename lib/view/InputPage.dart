@@ -16,7 +16,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender? selectGender;
+  Gender? selectGender = Gender.male;
   int sliderValue = 170;
   int weight = 60;
   int age = 18;
@@ -160,7 +160,10 @@ class _InputPageState extends State<InputPage> {
           //button
           InkWell(
             onTap: () {
-              Calculator calc = Calculator(height: sliderValue, weight: weight);
+              Calculator calc = Calculator(
+                  height: sliderValue,
+                  weight: weight,
+                  selectGender: selectGender);
               Navigator.push(
                 context,
                 MaterialPageRoute(
