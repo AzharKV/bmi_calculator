@@ -5,9 +5,9 @@ import 'ContainerWidget.dart';
 import 'InputPage.dart';
 
 class Result extends StatelessWidget {
-  final String bmiResult;
-  final String resultText;
-  final String interpretation;
+  final String? bmiResult;
+  final String? resultText;
+  final String? interpretation;
 
   Result({this.bmiResult, this.resultText, this.interpretation});
 
@@ -36,9 +36,9 @@ class Result extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(resultText.toUpperCase(), style: resultValue),
-                      Text(bmiResult, style: LabelNumberStyle),
-                      Text(interpretation,
+                      Text(resultText!.toUpperCase(), style: resultValue),
+                      Text(bmiResult!, style: LabelNumberStyle),
+                      Text(interpretation!,
                           textAlign: TextAlign.center, style: conclusionStyle),
                     ],
                   ),

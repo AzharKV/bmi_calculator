@@ -1,14 +1,14 @@
 import 'dart:math';
 
 class Calculator {
-  final int height;
-  final int weight;
-  double result;
+  final int? height;
+  final int? weight;
+  late double result;
 
   Calculator({this.height, this.weight});
 
   String calculateBMI() {
-    result = weight / pow(height / 100, 2);
+    result = weight! / pow(height! / 100, 2);
     return result.toStringAsFixed(1);
   }
 

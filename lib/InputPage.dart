@@ -15,7 +15,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender selectGender;
+  Gender? selectGender;
   int sliderValue = 170;
   int weight = 60;
   int age = 18;
@@ -38,9 +38,7 @@ class _InputPageState extends State<InputPage> {
                 //MaleContainer
                 Expanded(
                   child: RepeatContainerCode(
-                    onPressed: () {
-                      setState(() => selectGender = Gender.male);
-                    },
+                    onPressed: () => setState(() => selectGender = Gender.male),
                     colors: selectGender == Gender.male
                         ? activeColor
                         : deActiveColor,
@@ -74,18 +72,14 @@ class _InputPageState extends State<InputPage> {
                   SizedBox(height: 5.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
                     children: [
                       Text(sliderValue.toString(), style: LabelNumberStyle),
                       Text("cm", style: LabelStyle),
                     ],
                   ),
                   Slider(
-                    onChanged: (double value) {
-                      setState(() {
-                        sliderValue = value.round();
-                      });
-                    },
+                    onChanged: (double value) =>
+                        setState(() => sliderValue = value.round()),
                     value: sliderValue.toDouble(),
                     min: 120.0,
                     max: 220.0,
@@ -203,8 +197,8 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RoundIcon extends StatelessWidget {
-  final IconData iconData;
-  final Function onPress;
+  final IconData? iconData;
+  final Function()? onPress;
 
   RoundIcon({this.iconData, this.onPress});
 
