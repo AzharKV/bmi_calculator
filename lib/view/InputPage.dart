@@ -27,6 +27,7 @@ class _InputPageState extends State<InputPage> {
       appBar: AppBar(
         title: Text("BMI CALCULATOR"),
         centerTitle: true,
+        leading: SizedBox(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
