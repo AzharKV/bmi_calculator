@@ -26,7 +26,6 @@ class _InputPageState extends State<InputPage> {
       appBar: AppBar(
         title: Text("BMI CALCULATOR"),
         centerTitle: true,
-        leading: SizedBox(),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -172,14 +171,13 @@ class _InputPageState extends State<InputPage> {
               );
             },
             child: Container(
-              // width: MediaQuery.of(context).size.width,
               width: double.infinity,
               height: 60.0,
               color: sliderActiveColor,
               child: Center(
                 child: Text(
                   "CALCULATE",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: buttonText,
                 ),
               ),
             ),

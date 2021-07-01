@@ -55,7 +55,7 @@ class Result extends StatelessWidget {
                 child: Center(
                     child: Text(
                   "RECALCULATE",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  style: buttonText,
                 )),
               ),
             ),

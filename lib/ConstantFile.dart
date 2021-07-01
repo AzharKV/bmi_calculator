@@ -7,6 +7,8 @@ const conclusionStyle =
 const LabelNumberStyle = TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900);
 const resultValue =
     TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold, color: Colors.green);
+const buttonText =
+TextStyle(fontWeight: FontWeight.bold, fontSize: 20);
 
 //colors
 const primaryColor = Color(0xFF0A0E21);
